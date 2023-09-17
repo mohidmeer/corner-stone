@@ -1,27 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+body{
+
+  @apply selection:bg-primary selection:text-white
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.bg-parallax{
+
+  /* background-image: url('../public/assets/images/parallax.jpg'); */
+  @apply bg-[url('../public/assets/images/parallax.jpg')] bg-fixed
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h1{
+  @apply text-8xl font-extrabold 
+}
+h2{
+  @apply text-5xl font-bold 
+}
+h3{
+  @apply text-4xl font-bold 
+}
+h4{
+  @apply text-3xl font-bold 
+}
+h4{
+  @apply text-2xl font-bold 
+}
+h5{
+  @apply text-xl font-bold 
+}
+h5{
+  @apply text-lg font-bold 
+}
+
+
+.text-muted{
+
+  @apply text-[#b7b7b7]
+
+}
+.text-light{
+
+  @apply text-[#838383]
+
+}
+
+
+input{
+
+   @apply p-4 outline-primary pr-10 placeholder:text-[#b7b7b7]
+}
+
+
+.btn{
+  @apply px-6  py-2 bg-primary text-white font-bold focus:ring-4 ring-primary/50 rounded duration-300  hover:bg-primary/80
+}
+.btn-inv{
+  @apply px-6  py-2 bg-secondary text-white font-bold focus:ring-4 ring-secondary/50 rounded duration-300 hover:bg-secondary/80
+}
+
+
+.cm-shadow{
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Styling the navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+ @apply !text-gray-500
+}
+
+/* Hover effect for the navigation buttons */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  @apply !text-primary /* Change the background color on hover */
 }
