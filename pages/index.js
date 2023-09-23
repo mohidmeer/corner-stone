@@ -8,6 +8,7 @@ import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import TopBar from "@/components/TopBar";
 import AppLayout from "@/layouts/AppLayout";
+import Head from "next/head";
 
 
 
